@@ -27,6 +27,7 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
 
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         Map<String, Object> selenoidOptions = new HashMap<>();
         selenoidOptions.put("enableVNC", true);
@@ -34,6 +35,7 @@ public class TestBase {
         capabilities.setCapability("selenoid:options", selenoidOptions);
         Configuration.browserCapabilities = capabilities;
         Configuration.pageLoadStrategy = "eager";
+
     }
 
 
